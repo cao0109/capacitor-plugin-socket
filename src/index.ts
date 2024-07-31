@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { TcpPlugin } from './definitions';
+import { TcpPlugin } from './definitions';
 
-const Tcp = registerPlugin<TcpPlugin>('Tcp', {
+const TcpPlugin = registerPlugin<TcpPlugin>('TcpPlugin', {
   web: () => import('./web').then(m => new m.TcpWeb()),
 });
 
 export * from './definitions';
-export { Tcp };
+export { TcpPlugin };

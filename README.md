@@ -13,24 +13,46 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`connect(...)`](#connect)
+* [`send(...)`](#send)
+* [`disconnect()`](#disconnect)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### connect(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+connect(options: { ip: string; port: number; }) => Promise<void>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                       |
+| ------------- | ------------------------------------------ |
+| **`options`** | <code>{ ip: string; port: number; }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+--------------------
+
+
+### send(...)
+
+```typescript
+send(options: { data: string; }) => Promise<void>
+```
+
+| Param         | Type                           |
+| ------------- | ------------------------------ |
+| **`options`** | <code>{ data: string; }</code> |
+
+--------------------
+
+
+### disconnect()
+
+```typescript
+disconnect() => Promise<void>
+```
 
 --------------------
 
